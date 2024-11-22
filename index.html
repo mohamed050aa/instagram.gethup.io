@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Login (Demo)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fafafa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .login-container {
+      width: 350px;
+      padding: 20px;
+      background: #fff;
+      border: 1px solid #dbdbdb;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .login-container img {
+      width: 200px;
+      margin-bottom: 20px;
+    }
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #dbdbdb;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    .login-button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      background-color: #3897f0;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .login-button:hover {
+      background-color: #307de3;
+    }
+    .message {
+      margin-top: 15px;
+      color: green;
+      font-size: 14px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <img src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png" alt="Instagram Logo">
+    <form id="login-form">
+      <input type="text" class="input-field" id="username" placeholder="Phone number, username, or email" required>
+      <input type="password" class="input-field" id="password" placeholder="Password" required>
+      <button type="submit" class="login-button">Log In</button>
+    </form>
+    <p class="message" id="success-message">Login successful! (Demo only)</p>
+  </div>
+
+  <script>
+    const form = document.getElementById('login-form');
+    const message = document.getElementById('success-message');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent actual form submission
+      message.style.display = 'block'; // Show success message
+    });
+  </script>
+</body>
+</html>
